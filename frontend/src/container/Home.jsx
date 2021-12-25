@@ -3,8 +3,17 @@ import { HiMenu } from 'react-icons/hi';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import { Link, Route, Routes } from 'react-router-dom';
 import { Sidebar, UserProfile } from '../components';
+import client from '../client';
+import logo from '../assets/default.png';
+import Pins from './Pins';
 const Home = () => {
- return <div>Home</div>;
+ return (
+  <div className='flex bg-gray-50 md:flex-row flex-col h-screen transition-height duration-75 ease-out'>
+   <div className='hidden md:flex h-screen flex-initial'>
+    <Sidebar />
+   </div>
+  </div>
+ );
 };
 
 export default Home;
