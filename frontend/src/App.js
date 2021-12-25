@@ -1,7 +1,12 @@
 import './App.css';
-
+import { Routes, Route, useNavigate } from 'react-router-dom';
 function App() {
- return <h1 className='text-3xl font-bold underline'>test</h1>;
+ return (
+  <Routes>
+   <Route path='login' element={<Login />} />
+   <Route path='/*' element={<Home />} />
+  </Routes>
+ );
 }
 
 export default App;
