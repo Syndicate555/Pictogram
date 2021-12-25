@@ -5,7 +5,7 @@ import { IoIosArrowForward } from 'react-icons/io';
 import logo from '../assets/default.png';
 
 const Sidebar = () => {
- return <div></div>;
+ return <div>Sidebar</div>;
 };
 
 export default Sidebar;
