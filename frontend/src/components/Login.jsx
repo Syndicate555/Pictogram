@@ -6,6 +6,21 @@ import shareVideo from '../assets/video.mp4';
 import logo from '../assets/default.png';
 
 const Login = () => {
+ const navigate = useNavigate();
+ const responseGoogle = (response) => {
+  console.log(response);
+  // localStorage.setItem('user', JSON.stringify(response.profileObj));
+  // const { name, googleId, imageUrl } = response.profileObj;
+  // const doc = {
+  //  _id: googleId,
+  //  _type: 'user',
+  //  userName: name,
+  //  image: imageUrl,
+  // };
+  // client.createIfNotExists(doc).then(() => {
+  //  navigate('/', { replace: true });
+  // });
+ };
  return (
   <div className='flex justify-start items-center flex-col h-screen'>
    <div className='relative w-full h-ful'>
@@ -24,7 +39,7 @@ const Login = () => {
      </div>
      <div className='shadow-2xl'>
       <GoogleLogin
-       // clientId={`${process.env.REACT_APP_GOOGLE_API_TOKEN}`}
+       clientId={`${process.env.REACT_APP_GOOGLE_API_TOKEN}`}
        render={(renderProps) => (
         <button
          type='button'
