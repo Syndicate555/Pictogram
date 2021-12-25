@@ -10,14 +10,46 @@ const isActiveStyle =
  'flex items-center px-5 gap-3 hover:bg-sky-100 font-extrabold border-r-2 border-black  transition-all duration-200 ease-in-out capitalize';
 
 const categories = [
- { name: 'Animals' },
- { name: 'Cars' },
- { name: 'Nature' },
- { name: 'Technology' },
- { name: 'Architecture' },
- { name: 'Photography' },
- { name: 'Travel' },
- { name: 'Lifestyle' },
+ {
+  name: 'Animals',
+  image:
+   'https://images.unsplash.com/photo-1640451661517-ec31031d8b4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80',
+ },
+ {
+  name: 'Cars',
+  image:
+   'https://images.unsplash.com/photo-1640451661517-ec31031d8b4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80',
+ },
+ {
+  name: 'Nature',
+  image:
+   'https://images.unsplash.com/photo-1640451661517-ec31031d8b4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80',
+ },
+ {
+  name: 'Technology',
+  image:
+   'https://images.unsplash.com/photo-1640451661517-ec31031d8b4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80',
+ },
+ {
+  name: 'Architecture',
+  image:
+   'https://images.unsplash.com/photo-1640451661517-ec31031d8b4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80',
+ },
+ {
+  name: 'Photography',
+  image:
+   'https://images.unsplash.com/photo-1640451661517-ec31031d8b4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80',
+ },
+ {
+  name: 'Travel',
+  image:
+   'https://images.unsplash.com/photo-1640451661517-ec31031d8b4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80',
+ },
+ {
+  name: 'Lifestyle',
+  image:
+   'https://images.unsplash.com/photo-1640451661517-ec31031d8b4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80',
+ },
 ];
 const Sidebar = ({ closeToggle, user }) => {
  const handleCloseSidebar = () => {
@@ -38,7 +70,7 @@ const Sidebar = ({ closeToggle, user }) => {
       <RiHomeFill />
       Home
      </NavLink>
-     <h3 className='mt-2 px-5 text-base 2xl:text-xl'>Discover cateogries</h3>
+     <h1 className='mt-2 px-7 text-base xl:text-xl'>Discover cateogries</h1>
      {categories.slice(0, categories.length - 1).map((category) => (
       <NavLink
        to={`/category/${category.name}`}
@@ -46,7 +78,7 @@ const Sidebar = ({ closeToggle, user }) => {
        onClick={handleCloseSidebar}
        key={category.name}
       >
-       <img src={category.image} className='w-8 h-8 rounded-full shadow-sm' />
+       <img src={category.image} className='w-12 h-12 rounded-full shadow-sm' />
        {category.name}
       </NavLink>
      ))}
